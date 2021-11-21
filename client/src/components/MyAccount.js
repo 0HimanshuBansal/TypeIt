@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
 
 const MyAccount = () => {
-    // const userToken = localStorage.getItem('TypeItToken');
     const [user, setUser] = useState({ email: "", name: "", date: "" });
     let history = useHistory();
 
@@ -22,7 +21,6 @@ const MyAccount = () => {
         if (json.success === true) setUser({ name: json.user.name, email: json.user.email, date: json.user.date });
         else alert("Unauthorized request");
     }
-    // getUser();
     useEffect(() => { getUser(); }, [])
 
     const logOut = () => {
