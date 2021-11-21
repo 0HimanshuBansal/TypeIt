@@ -11,7 +11,8 @@ export const AddNote = () => {
     const saveNote = (event) => {
         event.preventDefault(); //to prevent page from reloading
         addNote(note.title, note.description, note.tag, sBgColor);
-        setNote({ title: "", description: "", tag: "default", sBgColor: "light"})
+        setNote({ title: "", description: "", tag: "default", bgColor: "light"});
+        setsBgColor('light');
     }
 
     const onChange = (event) => {
